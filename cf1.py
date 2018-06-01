@@ -1,5 +1,5 @@
 import neuralnetwork as nn
-import tasks
+import task
 
 def getStrictError():
     teacher = nn.teacher
