@@ -1,0 +1,51 @@
+"""
+    Initialisation
+"""
+
+learningConstant = 0.05
+momentum_constant = 0.9
+
+inputPatterns = [
+    [0, 0],
+    # [0.3, 0.8],
+    # [0, 0]
+]
+
+nodes = {"input": [1, 0.9], "hidden": [0,0], "output": [0,0]}
+
+connections = {
+    "firstLayer": [   # first layer connections
+        [1.1, -1.3],  # 0 x
+        [1.2, -1.4]   # 1 x
+    ],
+    "secondLayer": [  # second layer connections
+        [-0.8, 0.6],  # 0 x
+        [0.7, -0.5]   # 1 x
+    ]
+}
+
+weightChangeArray = {
+    "firstLayer": [   # first layer connections
+        [0, 0],  # 0 x
+        [0, 0]   # 1 x
+    ],
+    "secondLayer": [  # second layer connections
+        [0, 0],  # 0 x
+        [0, 0]   # 1 x
+    ]
+}
+
+bias = {
+    "hidden": [0.2, -0.2],
+    "output": [-0.3, 0.4]
+}
+
+teacher = [
+    [0.9, 0.1],
+    # [0.9, 0.9],
+    # [0.9, 0.9]
+]
+
+deltaArray = {
+    "output": [[], []]
+}
