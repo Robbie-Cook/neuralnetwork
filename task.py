@@ -71,6 +71,7 @@ class Task:
             self.task['teacher'].append(tp[i])
 
 
-def loadTask(task, preserveNet=True):
-    nn.initalise(input=task["inputPatterns"], teach=task["teacher"], momentum=task["momentumConstant"],
+    def loadTask(self, preserveNet=True):
+        task = self.task
+        nn.initalise(input=task["inputPatterns"], teach=task["teacher"], momentum=task["momentumConstant"],
                  hiddenNodes=task["numberOfHiddenNodes"], learning=task["learningConstant"], preserveNet=preserveNet)

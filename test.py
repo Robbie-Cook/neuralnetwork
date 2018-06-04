@@ -1,13 +1,17 @@
 import neuralnetwork as nn
-import task
+from task import Task
 
 
-print(task.Task(inputNodes=32, hiddenNodes=16, outputNodes=32, populationSize=20, auto=True).task)
 
+num_epochs = 0
+repeats = 500
+for i in range(repeats):
+    nn.initalise()
+    learnCount = nn.learn(errorCriterion=0.0001)['numEpochs']
+    num_epochs += learnCount
+    print(i, learnCount)
+num_epochs /= repeats
 
-nn.initalise()
-for i in range(100):
-    nn.runEpoch()
-    # print(nn.getStrictError())
+print("Num: ", num_epochs)
 
 nn.testNetwork()
